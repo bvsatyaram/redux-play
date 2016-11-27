@@ -1,0 +1,13 @@
+#app {
+  color: #4d4d4d;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+a.active, a:active {
+  color: orange;
+}
+
+nav {
+  padding-top: 20px;
+}
