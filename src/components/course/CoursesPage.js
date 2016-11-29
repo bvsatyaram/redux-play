@@ -18,7 +18,7 @@ class CoursesPage extends React.Component {
   onTitleChange(event) {
     const course = this.state.course;
     course.title = event.target.value;
-    this.setState({course: course});
+    this.setState({course});
   }
 
   onClickSave(event) {
@@ -26,7 +26,7 @@ class CoursesPage extends React.Component {
     this.props.actions.createCourse(course);
 
     course.title = '';
-    this.setState({course: course});
+    this.setState({course});
   }
 
   courseRow(course, index) {
