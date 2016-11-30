@@ -7,7 +7,7 @@ const Header = ({loading}) => {
     <nav>
       <IndexLink to="/" activeClassName="active">Home</IndexLink>
       {" | "}
-      <Link to="/courses" activeClassName="active">Courses</Link>
+      <Link to="/courses" className={location.pathname.startsWith('/course') && 'active'}>Courses</Link>
       {" | "}
       <Link to="/about" activeClassName="active">About</Link>
       {loading && <LoadingDots interval={100} dots={20}/>}
