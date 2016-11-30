@@ -37,7 +37,11 @@ class ManageCoursePage extends React.Component {
     event.preventDefault();
     this.setState({saveInProgress: true});
     this.props.actions.saveCourse(this.state.course)
-      .then(() => this.redirectToIndex());
+      .then(() => this.redirectToIndex())
+      .catch(error => {
+        toastr.error(error);
+        this.setState({saveInProgress: false});
+      });
   }
 
   redirectToIndex() {
